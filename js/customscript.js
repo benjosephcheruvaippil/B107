@@ -20,7 +20,7 @@ var subCategory = url.searchParams.get("sub");
 
 var passData = {
 }
-var url = "https://localhost:44332/api/data/"+category+"/"+subCategory;
+var url = "http://www.mychurchmanageronline.com/api/data/"+category+"/"+subCategory;
 var type = "GET";
 var handleData = function (response) {
     if (response != "") {
