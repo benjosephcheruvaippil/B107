@@ -35,6 +35,7 @@ var handleData = function (response) {
     }
   }
 }
+$('.preloader').addClass('is-active');
 AjaxCall(passData, url, type, handleData)
 
 
@@ -48,6 +49,9 @@ function AjaxCall(passData, url, type, handleData) {
       success: handleData,
       failure: function (response) {
           alert(response.responseText);
+      },
+      complete:function(response){
+        $('.preloader').removeClass('is-active');
       },
       error: function (response) {
           alert(response.responseText);
