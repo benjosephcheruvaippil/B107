@@ -9,10 +9,10 @@ var search=url.searchParams.get("search");
 var passData = {
 }
 var url;
-if(category!="" && subCategory!=""){
+if((category!="" && category!=null) && (subCategory!="" && subCategory!=null)){
    url = "http://www.mychurchmanageronline.com/api/data/"+category+"/"+subCategory;
 }
-else if(search!=""){
+else if(search!="" && search!=null){
   url = "http://www.mychurchmanageronline.com/api/data/search/"+search;
 }
 var type = "GET";
