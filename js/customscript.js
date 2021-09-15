@@ -4,10 +4,17 @@ var url_string = window.location.href;
 var url = new URL(url_string);
 var category = url.searchParams.get("cat");
 var subCategory = url.searchParams.get("sub");
+var search=url.searchParams.get("search");
 
 var passData = {
 }
-var url = "http://www.mychurchmanageronline.com/api/data/"+category+"/"+subCategory;
+var url;
+if(category!="" && subCategory!=""){
+   url = "http://www.mychurchmanageronline.com/api/data/"+category+"/"+subCategory;
+}
+else if(search!=""){
+  url = "http://www.mychurchmanageronline.com/api/data/search/"+search;
+}
 var type = "GET";
 var handleData = function (response) {
     if (response != "") {
@@ -23,9 +30,7 @@ var handleData = function (response) {
   }
 }
 $('.preloader').addClass('is-active');
-AjaxCall(passData, url, type, handleData)
-
-
+AjaxCall(passData, url, type, handleData);
 });
 
 function AjaxCall(passData, url, type, handleData) {
