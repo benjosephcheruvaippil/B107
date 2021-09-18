@@ -24,8 +24,8 @@
         $collectionPostVideo = $('.post-video-block'),
         // $("iframe[src*="youtube"], iframe[src*="vimeo"]") jQuery Multiple Selector
         $collectionEmbedVideo = $('iframe[src*="youtube"]'),
-        $productDetailElement = $('#pd-o-initiate'),
-        $productDetailElementThumbnail = $('#pd-o-thumbnail'),
+        //$productDetailElement = $('#pd-o-initiate'),
+        //$productDetailElementThumbnail = $('#pd-o-thumbnail'),
         $modalProductDetailElement = $('#js-product-detail-modal'),
         $modalProductDetailElementThumbnail = $('#js-product-detail-modal-thumbnail'),
         $shopCategoryToggleSpan = $('.shop-w__category-list .has-list > .js-shop-category-span'),// Recursive
@@ -449,94 +449,94 @@
 
 
     // Product Detail Init
-    RESHOP.productDetailInit = function() {
-      if ($productDetailElement.length && $productDetailElementThumbnail.length) {
+    // RESHOP.productDetailInit = function() {
+    //   if ($productDetailElement.length && $productDetailElementThumbnail.length) {
 
-          var ELEVATE_ZOOM_OBJ = {
-              borderSize: 1,
-              autoWidth:true,
-              zoomWindowWidth: 540,
-              zoomWindowHeight: 540,
-              zoomWindowOffetx: 10,
-              borderColour: '#e9e9e9',
-              cursor: 'pointer'
-          };
-            // Fires after first initialization
-          $productDetailElement.on('init', function () {
-              $(this).closest('.slider-fouc').removeClass('slider-fouc');
-          });
+    //       var ELEVATE_ZOOM_OBJ = {
+    //           borderSize: 1,
+    //           autoWidth:true,
+    //           zoomWindowWidth: 540,
+    //           zoomWindowHeight: 540,
+    //           zoomWindowOffetx: 10,
+    //           borderColour: '#e9e9e9',
+    //           cursor: 'pointer'
+    //       };
+    //         // Fires after first initialization
+    //       $productDetailElement.on('init', function () {
+    //           $(this).closest('.slider-fouc').removeClass('slider-fouc');
+    //       });
 
-          $productDetailElement.slick({
-              slidesToShow: 1,
-              slidesToScroll: 1,
-              infinite:false,
-              arrows: false,
-              dots: false,
-              fade: true,
-              asNavFor: $productDetailElementThumbnail
-          });
-          // Init elevate zoom plugin to the first image
-          $('#pd-o-initiate .slick-current img').elevateZoom(ELEVATE_ZOOM_OBJ);
+    //       $productDetailElement.slick({
+    //           slidesToShow: 1,
+    //           slidesToScroll: 1,
+    //           infinite:false,
+    //           arrows: false,
+    //           dots: false,
+    //           fade: true,
+    //           asNavFor: $productDetailElementThumbnail
+    //       });
+    //       // Init elevate zoom plugin to the first image
+    //       $('#pd-o-initiate .slick-current img').elevateZoom(ELEVATE_ZOOM_OBJ);
 
-          // Fires before slide change
-          $productDetailElement.on('beforeChange', function(event, slick, currentSlide, nextSlide){
-              // Get the next slide image
-              var $img = $(slick.$slides[nextSlide]).find('img');
-              // Remove old zoom elements
-              $('.zoomWindowContainer,.zoomContainer').remove();
-              // Reinit elevate zoom plugin to the next slide image
-              $($img).elevateZoom(ELEVATE_ZOOM_OBJ);
-          });
+    //       // Fires before slide change
+    //       $productDetailElement.on('beforeChange', function(event, slick, currentSlide, nextSlide){
+    //           // Get the next slide image
+    //           var $img = $(slick.$slides[nextSlide]).find('img');
+    //           // Remove old zoom elements
+    //           $('.zoomWindowContainer,.zoomContainer').remove();
+    //           // Reinit elevate zoom plugin to the next slide image
+    //           $($img).elevateZoom(ELEVATE_ZOOM_OBJ);
+    //       });
 
-          // Init Lightgallery plugin
-          $productDetailElement.lightGallery({
-              selector: '.pd-o-img-wrap',// lightgallery-core
-              download: false,// lightgallery-core
-              thumbnail: false,// Thumbnails
-              autoplayControls: false,// Autoplay-plugin
-              actualSize: false,// Zoom-plugin: Enable actual pixel icon
-              hash: false, // Hash-plugin
-              share: false// share-plugin
-          });
-          // Thumbnail images
-          // Fires after first initialization
-          $productDetailElementThumbnail.on('init', function () {
-              $(this).closest('.slider-fouc').removeAttr('class');
-          });
+    //       // Init Lightgallery plugin
+    //       $productDetailElement.lightGallery({
+    //           selector: '.pd-o-img-wrap',// lightgallery-core
+    //           download: false,// lightgallery-core
+    //           thumbnail: false,// Thumbnails
+    //           autoplayControls: false,// Autoplay-plugin
+    //           actualSize: false,// Zoom-plugin: Enable actual pixel icon
+    //           hash: false, // Hash-plugin
+    //           share: false// share-plugin
+    //       });
+    //       // Thumbnail images
+    //       // Fires after first initialization
+    //       $productDetailElementThumbnail.on('init', function () {
+    //           $(this).closest('.slider-fouc').removeAttr('class');
+    //       });
 
-          $productDetailElementThumbnail.slick({
-              slidesToShow: 4,
-              slidesToScroll: 1,
-              infinite:false,
-              arrows: true,
-              dots: false,
-              focusOnSelect: true,
-              asNavFor: $productDetailElement,
-              prevArrow:'<div class="pt-prev"><i class="fas fa-angle-left"></i>',
-              nextArrow:'<div class="pt-next"><i class="fas fa-angle-right"></i>',
-              responsive: [
-                  {
-                      breakpoint: 1200,
-                      settings: {
-                          slidesToShow: 4
-                      }
-                  },
-                  {
-                      breakpoint: 992,
-                      settings: {
-                          slidesToShow: 3
-                      }
-                  },
-                  {
-                      breakpoint: 576,
-                      settings: {
-                          slidesToShow: 2
-                      }
-                  }
-              ]
-          });
-      }
-    };
+    //       $productDetailElementThumbnail.slick({
+    //           slidesToShow: 4,
+    //           slidesToScroll: 1,
+    //           infinite:false,
+    //           arrows: true,
+    //           dots: false,
+    //           focusOnSelect: true,
+    //           asNavFor: $productDetailElement,
+    //           prevArrow:'<div class="pt-prev"><i class="fas fa-angle-left"></i>',
+    //           nextArrow:'<div class="pt-next"><i class="fas fa-angle-right"></i>',
+    //           responsive: [
+    //               {
+    //                   breakpoint: 1200,
+    //                   settings: {
+    //                       slidesToShow: 4
+    //                   }
+    //               },
+    //               {
+    //                   breakpoint: 992,
+    //                   settings: {
+    //                       slidesToShow: 3
+    //                   }
+    //               },
+    //               {
+    //                   breakpoint: 576,
+    //                   settings: {
+    //                       slidesToShow: 2
+    //                   }
+    //               }
+    //           ]
+    //       });
+    //   }
+    // };
 
     // Modal Product Detail Init
     RESHOP.modalProductDetailInit = function() {
@@ -678,7 +678,7 @@
         RESHOP.blogPostVideo();
         RESHOP.blogPostEmbedVideo();
         RESHOP.blogPostMasonry();
-        RESHOP.productDetailInit();
+        //RESHOP.productDetailInit();
         RESHOP.modalProductDetailInit();
         RESHOP.shopCategoryToggle();
         RESHOP.shopPerspectiveChange();
