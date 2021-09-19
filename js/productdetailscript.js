@@ -15,8 +15,8 @@ $(document).ready(function(){
 
     var passData = {
     }
-    //var url = "https://localhost:44332/api/data/product/"+prod_id;
-    var url = "http://www.mychurchmanageronline.com/api/data/product/"+prod_id;
+    var url = "https://localhost:44332/api/data/product/"+prod_id;
+    //var url = "http://www.mychurchmanageronline.com/api/data/product/"+prod_id;
   
     var type = "GET";
     var handleData = function (response) {
@@ -26,10 +26,10 @@ $(document).ready(function(){
                 var name="Deepa Jossy"
                 var msg="Order Confirmed";
              //alert(obj.product_name);
-              $('.app-content').append('<div class="u-s-p-t-90"><div class="container"><div class="row"><div class="col-lg-5"><div class="pd-breadcrumb u-s-m-b-30"> <ul class="pd-breadcrumb__list"> <li class="has-separator"> <a href="index.hml">Home</a></li> <li class="has-separator"> <a href="">'+obj.category_name+'</a></li> <li class="has-separator"> <a href="">'+obj.subcategory_name+'</a></li> <li class="is-marked"> <a href="">Nikon Cameras</a></li> </ul> </div><div class="pd u-s-m-b-30"> <div class="slider-fouc pd-wrap"> <div id="pd-o-initiate"> <div class="pd-o-img-wrap" data-src="https://res.cloudinary.com/b107/image/upload/v1631907734/football_bfk6kh.jpg"> <img class="u-img-fluid" src="https://res.cloudinary.com/b107/image/upload/v1631907734/football_bfk6kh.jpg" data-zoom-image="https://res.cloudinary.com/b107/image/upload/v1631907734/football_bfk6kh.jpg" alt=""></div> </div> <span class="pd-text">Click for larger zoom</span> </div> <div class="u-s-m-t-15"> <div class="slider-fouc"> <div id="pd-o-thumbnail"> <div> <img class="u-img-fluid" src="https://res.cloudinary.com/b107/image/upload/v1631907734/football_bfk6kh.jpg" alt=""></div> </div> </div> </div> </div> <!--====== End - Product Detail Zoom ======--> </div><div class="col-lg-7"><div class="pd-detail"><div><span class="pd-detail__name">'+obj.product_name+'</span></div><div><div class="pd-detail__inline"><span class="pd-detail__price">'+obj.price+'</span><span class="pd-detail__discount">(76% OFF)</span><del class="pd-detail__del">$28.97</del></div></div><div class="u-s-m-b-15"><span class="pd-detail__preview-desc">'+obj.description+'</span></div><div class="u-s-m-b-15"><ul class="pd-social-list"><li><a class="s-fb--color-hover" href="#"><i class="fab fa-facebook-f"></i></a></li><li><a class="s-insta--color-hover" href="#"><i class="fab fa-instagram"></i></a></li><li><a class="s-wa--color-hover" href="#"><i class="fab fa-whatsapp"></i></a></li></ul></div><div class="u-s-m-b-15"><form class="pd-detail__form"><div class="pd-detail-inline-2"><div class="u-s-m-b-15"><div class="input-counter"><span class="input-counter__minus fas fa-minus"></span><input class="input-counter__text input-counter--text-primary-style" type="text" value="1" data-min="1" data-max="1000"><span class="input-counter__plus fas fa-plus"></span></div> </div><div class="u-s-m-b-15"><a href="https://api.whatsapp.com/send?phone=919778123839" target="_blank"> <input type="image" src="https://i.ibb.co/N9P0K9H/239px-Whats-App-svg.png" alt="Submit" width="40" height="40"> </a></div></div></form></div><div class="u-s-m-b-15"><span class="pd-detail__label u-s-m-b-8">Product Policy:</span><ul class="pd-detail__policy-list"><li><i class="fas fa-check-circle u-s-m-r-8"></i><span>Buyer Protection.</span></li><li><i class="fas fa-check-circle u-s-m-r-8"></i><span>Full Refund if you dont receive your order.</span></li><li><i class="fas fa-check-circle u-s-m-r-8"></i><span>Returns accepted if product not as described.</span></li></ul></div></div></div></div></div></div>');
+              $('.app-content').append('<div class="u-s-p-t-90"><div class="container"><div class="row"><div class="col-lg-5"><div class="pd-breadcrumb u-s-m-b-30"> <ul class="pd-breadcrumb__list"> <li class="has-separator"> <a href="">Home</a></li> <li class="has-separator"> <a href="">'+obj.category_name+'</a></li> <li class="has-separator"> <a href="">'+obj.subcategory_name+'</a></li> <li class="is-marked"> <a href="">'+obj.product_name+'</a></li> </ul> </div><div class="pd u-s-m-b-30"> <div class="slider-fouc pd-wrap"> <div id="pd-o-initiate"> <div class="pd-o-img-wrap" data-src="https://res.cloudinary.com/b107/image/upload/v1631907734/football_bfk6kh.jpg"> <img class="u-img-fluid" src="https://res.cloudinary.com/b107/image/upload/v1631907734/football_bfk6kh.jpg" data-zoom-image="https://res.cloudinary.com/b107/image/upload/v1631907734/football_bfk6kh.jpg" alt=""></div> </div> <span class="pd-text">Click for larger zoom</span> </div> <div class="u-s-m-t-15"> <div class="slider-fouc"> <div id="pd-o-thumbnail"> <div> <img class="u-img-fluid" src="https://res.cloudinary.com/b107/image/upload/v1631907734/football_bfk6kh.jpg" alt=""></div> </div> </div> </div> </div> <!--====== End - Product Detail Zoom ======--> </div><div class="col-lg-7"><div class="pd-detail"><div><span class="pd-detail__name">'+obj.product_name+'</span></div><div><div class="pd-detail__inline"><span class="pd-detail__price">Rs.'+obj.price+'</span><span class="pd-detail__discount">(76% OFF)</span><del class="pd-detail__del">$28.97</del></div></div><div class="u-s-m-b-15"><span class="pd-detail__preview-desc">'+obj.description+'</span></div><div class="u-s-m-b-15"><ul class="pd-social-list"><li><a class="s-fb--color-hover" href="#"><i class="fab fa-facebook-f"></i></a></li><li><a class="s-insta--color-hover" href="#"><i class="fab fa-instagram"></i></a></li><li><a class="s-wa--color-hover" href="#"><i class="fab fa-whatsapp"></i></a></li></ul></div><div class="u-s-m-b-15"><form class="pd-detail__form"><div class="pd-detail-inline-2"><div class="u-s-m-b-15"><div class="input-counter"><span class="input-counter__minus fas fa-minus"></span><input class="input-counter__text input-counter--text-primary-style" type="text" value="1" data-min="1" data-max="1000"><span class="input-counter__plus fas fa-plus"></span></div> </div><div class="u-s-m-b-15"><a href="https://api.whatsapp.com/send?phone=919778123839" target="_blank"> <input type="image" src="https://i.ibb.co/N9P0K9H/239px-Whats-App-svg.png" alt="Submit" width="40" height="40"> </a></div></div></form></div><div class="u-s-m-b-15"><span class="pd-detail__label u-s-m-b-8">Product Policy:</span><ul class="pd-detail__policy-list"><li><i class="fas fa-check-circle u-s-m-r-8"></i><span>Buyer Protection.</span></li><li><i class="fas fa-check-circle u-s-m-r-8"></i><span>Full Refund if you dont receive your order.</span></li><li><i class="fas fa-check-circle u-s-m-r-8"></i><span>Returns accepted if product not as described.</span></li></ul></div></div></div></div></div></div>');
            
               var RESHOP = {};
-              var $productDetailElement = $('#pd-o-initiate'), $productDetailElementThumbnail = $('#pd-o-thumbnail');
+              var $productDetailElement = $('#pd-o-initiate'), $productDetailElementThumbnail = $('#pd-o-thumbnail') ,$collectionInputCounter = $('.input-counter');
           
               RESHOP.productDetailInit = function() {
                   if ($productDetailElement.length && $productDetailElementThumbnail.length) {
@@ -119,8 +119,44 @@ $(document).ready(function(){
                       });
                   }
                 };
+
+                RESHOP.initInputCounter = function() {
+                    // Check if Input Counters on the page
+                    if ($collectionInputCounter.length) {
+                        // Attach Click event to plus button
+                        $collectionInputCounter.find('.input-counter__plus').on('click',function () {
+                            var $input = $(this).parent().find('input');
+                            var count = parseInt($input.val()) + 1; // Number + Number
+                            $input.val(count).change();
+                        });
+                        // Attach Click event to minus button
+                        $collectionInputCounter.find('.input-counter__minus').on('click',function () {
+                            var $input = $(this).parent().find('input');
+                            var count = parseInt($input.val()) - 1; // Number - Number
+                            $input.val(count).change();
+                        });
+                        // Fires when the value of the element is changed
+                        $collectionInputCounter.find('input').change(function () {
+                            var $this = $(this);
+                            var min = $this.data('min');
+                            var max = $this.data('max');
+                            var val = parseInt($this.val());// Current value
+                            // Restrictions check
+                            if (!val) {
+                               val = 1;
+                            }
+                            // The min() method returns the number with the lowest value
+                            val = Math.min(val,max);
+                            // The max() method returns the number with the highest value
+                            val = Math.max(val,min);
+                            // Sets the Value
+                            $this.val(val);
+                        });
+                    }
+                };
           
                 RESHOP.productDetailInit();
+                RESHOP.initInputCounter();
 
            
             }    
