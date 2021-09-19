@@ -1,5 +1,13 @@
 $(document).ready(function(){
 
+    //Search feature
+    $("#btnMainSearch").click(function(){
+        var searchQuery=$("#main-search").val();
+    window.location.href="shop-side-version-2.html?search="+searchQuery;
+    return false;
+    });
+    //Search feature
+
     var url_string = window.location.href;
     var url = new URL(url_string);
     var prod_id = url.searchParams.get("id");
