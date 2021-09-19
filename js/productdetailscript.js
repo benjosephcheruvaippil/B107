@@ -15,8 +15,8 @@ $(document).ready(function(){
 
     var passData = {
     }
-    var url = "https://localhost:44332/api/data/product/"+prod_id;
-    //var url = "http://www.mychurchmanageronline.com/api/data/product/"+prod_id;
+    //var url = "https://localhost:44332/api/data/product/"+prod_id;
+    var url = "http://www.mychurchmanageronline.com/api/data/product/"+prod_id;
   
     var type = "GET";
     var handleData = function (response) {
