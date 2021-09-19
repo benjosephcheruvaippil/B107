@@ -18,14 +18,14 @@ var passData = {
 }
 var url;
 if((category!="" && category!=null) && (subCategory!="" && subCategory!=null)){
-   //url = "http://www.mychurchmanageronline.com/api/data/"+category+"/"+subCategory;
-   url = "https://localhost:44332/api/data/"+category+"/"+subCategory;
+   url = "http://www.mychurchmanageronline.com/api/data/"+category+"/"+subCategory;
+   //url = "https://localhost:44332/api/data/"+category+"/"+subCategory;
    
 }
 else if(search!="" && search!=null){
   $("#main-search").val(search);
-  //url = "http://www.mychurchmanageronline.com/api/data/search/"+search;
-  url = "https://localhost:44332/api/data/search/"+search;
+  url = "http://www.mychurchmanageronline.com/api/data/search/"+search;
+  //url = "https://localhost:44332/api/data/search/"+search;
 }
 var type = "GET";
 var handleData = function (response) {
